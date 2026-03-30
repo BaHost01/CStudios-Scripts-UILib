@@ -68,51 +68,51 @@ function Orion:CreateOrion(orionName)
     -- MainWhiteFrame (acento vermelho)
     MainWhiteFrame.Name = "MainWhiteFrame"
     MainWhiteFrame.Parent = ScreenGui
-    MainWhiteFrame.BackgroundColor3 = Color3.fromRGB(139, 0, 23)
+    MainWhiteFrame.BackgroundColor3 = Color3.fromRGB(20, 120, 220)
     MainWhiteFrame.BorderSizePixel = 0
     MainWhiteFrame.ClipsDescendants = true
-    MainWhiteFrame.Position = UDim2.new(0.236969739, 0, 0.360436916, 0)
-    MainWhiteFrame.Size = UDim2.new(0, 528, 0, 310)
-    mainCorner.CornerRadius = UDim.new(0, 3)
+    MainWhiteFrame.Position = UDim2.new(0.22, 0, 0.28, 0)
+    MainWhiteFrame.Size = UDim2.new(0, 620, 0, 370)
+    mainCorner.CornerRadius = UDim.new(0, 8)
     mainCorner.Name = "mainCorner"
     mainCorner.Parent = MainWhiteFrame
 
     -- MainWhiteFrame_2 (corpo principal)
     MainWhiteFrame_2.Name = "MainWhiteFrame"
     MainWhiteFrame_2.Parent = MainWhiteFrame
-    MainWhiteFrame_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    MainWhiteFrame_2.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
     MainWhiteFrame_2.BorderSizePixel = 0
     MainWhiteFrame_2.ClipsDescendants = true
     MainWhiteFrame_2.Position = UDim2.new(0.0113636367, 0, 0, 0)
-    MainWhiteFrame_2.Size = UDim2.new(0, 525, 0, 310)
-    mainCorner_2.CornerRadius = UDim.new(0, 3)
+    MainWhiteFrame_2.Size = UDim2.new(0, 614, 0, 370)
+    mainCorner_2.CornerRadius = UDim.new(0, 8)
     mainCorner_2.Name = "mainCorner"
     mainCorner_2.Parent = MainWhiteFrame_2
 
     -- Tab sidebar
     tabFrame.Name = "tabFrame"
     tabFrame.Parent = MainWhiteFrame_2
-    tabFrame.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-    tabFrame.BorderColor3 = Color3.fromRGB(53, 53, 53)
+    tabFrame.BackgroundColor3 = Color3.fromRGB(24, 28, 39)
+    tabFrame.BorderColor3 = Color3.fromRGB(58, 68, 92)
     tabFrame.ClipsDescendants = true
-    tabFrame.Size = UDim2.new(0, 100, 0, 309)
+    tabFrame.Size = UDim2.new(0, 128, 0, 368)
     tabList.Name = "tabList"
     tabList.Parent = tabFrame
     tabList.HorizontalAlignment = Enum.HorizontalAlignment.Right
     tabList.SortOrder = Enum.SortOrder.LayoutOrder
-    tabList.Padding = UDim.new(0, 2)
+    tabList.Padding = UDim.new(0, 6)
     tabPadd.Name = "tabPadd"
     tabPadd.Parent = tabFrame
-    tabPadd.PaddingRight = UDim.new(0, 2)
+    tabPadd.PaddingRight = UDim.new(0, 6)
     tabPadd.PaddingTop = UDim.new(0, 5)
 
     -- Header
     header.Name = "header"
     header.Parent = MainWhiteFrame_2
-    header.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
-    header.Position = UDim2.new(0.207619041, 0, 0.0258064512, 0)
-    header.Size = UDim2.new(0, 408, 0, 43)
-    mainCorner_4.CornerRadius = UDim.new(0, 3)
+    header.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+    header.Position = UDim2.new(0.23, 0, 0.03, 0)
+    header.Size = UDim2.new(0, 470, 0, 50)
+    mainCorner_4.CornerRadius = UDim.new(0, 8)
     mainCorner_4.Name = "mainCorner"
     mainCorner_4.Parent = header
 
@@ -120,11 +120,11 @@ function Orion:CreateOrion(orionName)
     libTitle.Parent = header
     libTitle.BackgroundTransparency = 1
     libTitle.Position = UDim2.new(0.0294117648, 0, 0, 0)
-    libTitle.Size = UDim2.new(0, 343, 0, 43)
+    libTitle.Size = UDim2.new(0, 390, 0, 50)
     libTitle.Font = Enum.Font.GothamSemibold
     libTitle.Text = orionName
     libTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-    libTitle.TextSize = 18
+    libTitle.TextSize = 20
     libTitle.TextXAlignment = Enum.TextXAlignment.Left
 
     closeLib.Name = "closeLib"
@@ -138,13 +138,13 @@ function Orion:CreateOrion(orionName)
         if isClosed then
             closeLib.Image = "rbxassetid://5165666242"
             TweenService:Create(closeLib, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { Rotation = 360 }):Play()
-            MainWhiteFrame:TweenSize(UDim2.new(0, 424, 0, 58), "In", "Linear", 0.12)
+            MainWhiteFrame:TweenSize(UDim2.new(0, 520, 0, 64), "In", "Linear", 0.12)
             TweenService:Create(MainWhiteFrame_2, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { BackgroundTransparency = 1 }):Play()
             TweenService:Create(MainWhiteFrame,   TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { BackgroundTransparency = 1 }):Play()
         else
             closeLib.Image = "rbxassetid://4988112250"
             TweenService:Create(closeLib, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { Rotation = 0 }):Play()
-            MainWhiteFrame:TweenSize(UDim2.new(0, 528, 0, 310), "In", "Linear", 0.12)
+            MainWhiteFrame:TweenSize(UDim2.new(0, 620, 0, 370), "In", "Linear", 0.12)
             TweenService:Create(MainWhiteFrame_2, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { BackgroundTransparency = 0 }):Play()
             TweenService:Create(MainWhiteFrame,   TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { BackgroundTransparency = 0 }):Play()
         end
@@ -153,10 +153,10 @@ function Orion:CreateOrion(orionName)
     -- Element container
     elementContainer.Name = "elementContainer"
     elementContainer.Parent = MainWhiteFrame_2
-    elementContainer.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-    elementContainer.Position = UDim2.new(0.207619041, 0, 0.187096775, 0)
-    elementContainer.Size = UDim2.new(0, 408, 0, 243)
-    mainCorner_5.CornerRadius = UDim.new(0, 3)
+    elementContainer.BackgroundColor3 = Color3.fromRGB(24, 28, 39)
+    elementContainer.Position = UDim2.new(0.23, 0, 0.19, 0)
+    elementContainer.Size = UDim2.new(0, 470, 0, 286)
+    mainCorner_5.CornerRadius = UDim.new(0, 8)
     mainCorner_5.Name = "mainCorner"
     mainCorner_5.Parent = elementContainer
 
@@ -197,19 +197,19 @@ function Orion:CreateOrion(orionName)
 
         notifFrame.Name = "OrionNotif_"..slot
         notifFrame.Parent = ScreenGui
-        notifFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+        notifFrame.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
         notifFrame.BorderSizePixel = 0
         notifFrame.AnchorPoint = Vector2.new(1, 0)
         notifFrame.Position = UDim2.new(1, 270, 0, 10 + (slot - 1) * 80)
         notifFrame.Size = UDim2.new(0, 260, 0, 70)
-        notifCorner.CornerRadius = UDim.new(0, 4)
+        notifCorner.CornerRadius = UDim.new(0, 8)
         notifCorner.Parent = notifFrame
 
         accent.Parent = notifFrame
-        accent.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+        accent.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
         accent.BorderSizePixel = 0
         accent.Size = UDim2.new(0, 4, 1, 0)
-        accentCorner.CornerRadius = UDim.new(0, 4)
+        accentCorner.CornerRadius = UDim.new(0, 8)
         accentCorner.Parent = accent
 
         titleLbl.Parent = notifFrame
@@ -234,12 +234,12 @@ function Orion:CreateOrion(orionName)
         msgLbl.TextWrapped = true
 
         timerBar.Parent = notifFrame
-        timerBar.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+        timerBar.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
         timerBar.BorderSizePixel = 0
         timerBar.AnchorPoint = Vector2.new(0, 1)
         timerBar.Position = UDim2.new(0, 0, 1, 0)
         timerBar.Size = UDim2.new(1, 0, 0, 3)
-        timerCorner.CornerRadius = UDim.new(0, 4)
+        timerCorner.CornerRadius = UDim.new(0, 8)
         timerCorner.Parent = timerBar
 
         -- Slide in
@@ -277,8 +277,8 @@ function Orion:CreateOrion(orionName)
 
         tabBtn.Name = "tabBtn"..secName
         tabBtn.Parent = tabFrame
-        tabBtn.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-        tabBtn.BorderColor3 = Color3.fromRGB(53, 53, 53)
+        tabBtn.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
+        tabBtn.BorderColor3 = Color3.fromRGB(58, 68, 92)
         tabBtn.Position = UDim2.new(0.0599999987, 0, 0.0323624611, 0)
         tabBtn.Size = UDim2.new(0, 95, 0, 32)
         tabBtn.Font = Enum.Font.GothamSemibold
@@ -286,7 +286,7 @@ function Orion:CreateOrion(orionName)
         tabBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
         tabBtn.TextSize = 14
         tabBtn.AutoButtonColor = false
-        mainCorner_3.CornerRadius = UDim.new(0, 3)
+        mainCorner_3.CornerRadius = UDim.new(0, 8)
         mainCorner_3.Name = "mainCorner"
         mainCorner_3.Parent = tabBtn
 
@@ -301,14 +301,14 @@ function Orion:CreateOrion(orionName)
         newPage.BorderSizePixel = 0
         newPage.Size = UDim2.new(1, 0, 1, 0)
         newPage.ScrollBarThickness = 5
-        newPage.ScrollBarImageColor3 = Color3.fromRGB(255, 2, 40)
+        newPage.ScrollBarImageColor3 = Color3.fromRGB(0, 190, 255)
         newPage.Visible = false
 
         pageItemList.Name = "pageItemList"
         pageItemList.Parent = newPage
         pageItemList.HorizontalAlignment = Enum.HorizontalAlignment.Center
         pageItemList.SortOrder = Enum.SortOrder.LayoutOrder
-        pageItemList.Padding = UDim.new(0, 3)
+        pageItemList.Padding = UDim.new(0, 8)
 
         UIPadding.Parent = newPage
         UIPadding.PaddingRight = UDim.new(0, 5)
@@ -336,13 +336,13 @@ function Orion:CreateOrion(orionName)
                 if v:IsA("TextButton") then
                     TweenService:Create(v,
                         TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
-                        { BackgroundColor3 = Color3.fromRGB(25, 25, 25) }
+                        { BackgroundColor3 = Color3.fromRGB(19, 22, 30) }
                     ):Play()
                 end
             end
             TweenService:Create(tabBtn,
                 TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
-                { BackgroundColor3 = Color3.fromRGB(139, 0, 23) }
+                { BackgroundColor3 = Color3.fromRGB(20, 120, 220) }
             ):Play()
         end)
 
@@ -359,17 +359,17 @@ function Orion:CreateOrion(orionName)
 
             labelFrame.Name = "labelFrame"
             labelFrame.Parent = newPage
-            labelFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            labelFrame.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             labelFrame.Position = UDim2.new(0.0367647074, 0, 0.0185185187, 0)
-            labelFrame.Size = UDim2.new(0, 394, 0, 42)
-            lCorner.CornerRadius = UDim.new(0, 3)
+            labelFrame.Size = UDim2.new(0, 456, 0, 46)
+            lCorner.CornerRadius = UDim.new(0, 8)
             lCorner.Parent = labelFrame
 
             txtLabel.Name = "txtLabel"
             txtLabel.Parent = labelFrame
             txtLabel.BackgroundTransparency = 1
             txtLabel.Position = UDim2.new(0, 0, 0.0238095243, 0)
-            txtLabel.Size = UDim2.new(0, 395, 0, 41)
+            txtLabel.Size = UDim2.new(0, 456, 0, 46)
             txtLabel.Font = Enum.Font.GothamSemibold
             txtLabel.Text = labelText
             txtLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -392,21 +392,21 @@ function Orion:CreateOrion(orionName)
 
             textButtonFrame.Name = "textButtonFrame"
             textButtonFrame.Parent = newPage
-            textButtonFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            textButtonFrame.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             textButtonFrame.Position = UDim2.new(0.0147058824, 0, 0.0246913582, 0)
-            textButtonFrame.Size = UDim2.new(0, 394, 0, 42)
-            tbCorner.CornerRadius = UDim.new(0, 3)
+            textButtonFrame.Size = UDim2.new(0, 456, 0, 46)
+            tbCorner.CornerRadius = UDim.new(0, 8)
             tbCorner.Parent = textButtonFrame
 
             TextButton.Parent = textButtonFrame
-            TextButton.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+            TextButton.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
             TextButton.Position = UDim2.new(0.017766498, 0, 0.166666672, 0)
-            TextButton.Size = UDim2.new(0, 141, 0, 27)
+            TextButton.Size = UDim2.new(0, 170, 0, 30)
             TextButton.Font = Enum.Font.GothamSemibold
             TextButton.Text = buttonText
             TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextButton.TextSize = 14
-            btnCorner.CornerRadius = UDim.new(0, 3)
+            btnCorner.CornerRadius = UDim.new(0, 8)
             btnCorner.Parent = TextButton
 
             textButtonInfo.Name = "textButtonInfo"
@@ -444,10 +444,10 @@ function Orion:CreateOrion(orionName)
 
             toggleFrame.Name = "toggleFrame"
             toggleFrame.Parent = newPage
-            toggleFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            toggleFrame.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             toggleFrame.Position = UDim2.new(0.0147058824, 0, 0.0246913582, 0)
-            toggleFrame.Size = UDim2.new(0, 394, 0, 42)
-            togCorner.CornerRadius = UDim.new(0, 3)
+            toggleFrame.Size = UDim2.new(0, 456, 0, 46)
+            togCorner.CornerRadius = UDim.new(0, 8)
             togCorner.Parent = toggleFrame
 
             toggleInfo.Name = "toggleInfo"
@@ -463,29 +463,29 @@ function Orion:CreateOrion(orionName)
 
             toggleInerFrame.Name = "toggleInerFrame"
             toggleInerFrame.Parent = toggleFrame
-            toggleInerFrame.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+            toggleInerFrame.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
             toggleInerFrame.Position = UDim2.new(0.0177664906, 0, 0.166666672, 0)
             toggleInerFrame.Size = UDim2.new(0, 27, 0, 27)
-            tifCorner.CornerRadius = UDim.new(0, 3)
+            tifCorner.CornerRadius = UDim.new(0, 8)
             tifCorner.Parent = toggleInerFrame
 
             toggleInnerFrame1.Name = "toggleInnerFrame1"
             toggleInnerFrame1.Parent = toggleInerFrame
-            toggleInnerFrame1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            toggleInnerFrame1.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             toggleInnerFrame1.Position = UDim2.new(0.0177664906, 0, -0.0185185075, 0)
             toggleInnerFrame1.Size = UDim2.new(0, 25, 0, 25)
-            tif1Corner.CornerRadius = UDim.new(0, 3)
+            tif1Corner.CornerRadius = UDim.new(0, 8)
             tif1Corner.Parent = toggleInnerFrame1
 
             toggleBtn.Name = "toggleBtn"
             toggleBtn.Parent = toggleInnerFrame1
-            toggleBtn.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            toggleBtn.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             toggleBtn.Position = UDim2.new(2.2399888, 0, -0.0185185149, 0)
             toggleBtn.Size = UDim2.new(0, 23, 0, 23)
             toggleBtn.Font = Enum.Font.GothamSemibold
             toggleBtn.Text = ""
             toggleBtn.AutoButtonColor = false
-            tbCorner.CornerRadius = UDim.new(0, 3)
+            tbCorner.CornerRadius = UDim.new(0, 8)
             tbCorner.Parent = toggleBtn
 
             UIListLayout.Parent = toggleInnerFrame1
@@ -505,8 +505,8 @@ function Orion:CreateOrion(orionName)
                 TweenService:Create(toggleBtn,
                     TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
                     { BackgroundColor3 = toggled
-                        and Color3.fromRGB(181, 1, 31)
-                        or  Color3.fromRGB(25, 25, 25) }
+                        and Color3.fromRGB(0, 170, 255)
+                        or  Color3.fromRGB(19, 22, 30) }
                 ):Play()
             end)
         end
@@ -533,10 +533,10 @@ function Orion:CreateOrion(orionName)
 
             sliderFrame.Name = "sliderFrame"
             sliderFrame.Parent = newPage
-            sliderFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            sliderFrame.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             sliderFrame.Position = UDim2.new(0.0147058824, 0, 0.0246913582, 0)
-            sliderFrame.Size = UDim2.new(0, 394, 0, 42)
-            slCorner.CornerRadius = UDim.new(0, 3)
+            sliderFrame.Size = UDim2.new(0, 456, 0, 46)
+            slCorner.CornerRadius = UDim.new(0, 8)
             slCorner.Parent = sliderFrame
 
             sliderInfo.Name = "sliderInfo"
@@ -557,20 +557,20 @@ function Orion:CreateOrion(orionName)
             sliderValue.Size = UDim2.new(0, 68, 0, 17)
             sliderValue.Font = Enum.Font.GothamSemibold
             sliderValue.Text = minvalue.."/"..maxvalue
-            sliderValue.TextColor3 = Color3.fromRGB(199, 0, 33)
+            sliderValue.TextColor3 = Color3.fromRGB(120, 220, 255)
             sliderValue.TextSize = 14
             sliderValue.TextXAlignment = Enum.TextXAlignment.Left
 
             sliderBtn.Name = "sliderBtn"
             sliderBtn.Parent = sliderFrame
-            sliderBtn.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+            sliderBtn.BackgroundColor3 = Color3.fromRGB(24, 28, 39)
             sliderBtn.BorderSizePixel = 0
             sliderBtn.Position = UDim2.new(0.0179999992, 0, 0.381000012, 0)
-            sliderBtn.Size = UDim2.new(0, 141, 0, 10)
+            sliderBtn.Size = UDim2.new(0, 170, 0, 10)
             sliderBtn.AutoButtonColor = false
             sliderBtn.Font = Enum.Font.SourceSans
             sliderBtn.Text = ""
-            sbCorner.CornerRadius = UDim.new(0, 3)
+            sbCorner.CornerRadius = UDim.new(0, 8)
             sbCorner.Parent = sliderBtn
 
             sliderdragfrm.Name = "sliderdragfrm"
@@ -580,7 +580,7 @@ function Orion:CreateOrion(orionName)
 
             sliderMainFrm.Name = "sliderMainFrm"
             sliderMainFrm.Parent = sliderBtn
-            sliderMainFrm.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+            sliderMainFrm.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
             sliderMainFrm.BorderSizePixel = 0
             sliderMainFrm.Size = UDim2.new(0, 0, 0, 10)
             smfCorner.CornerRadius = UDim.new(0, 5)
@@ -596,22 +596,22 @@ function Orion:CreateOrion(orionName)
             local Value
 
             sliderBtn.MouseButton1Down:Connect(function()
-                Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 141) * sliderMainFrm.AbsoluteSize.X) + tonumber(minvalue)) or 0
+                Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 170) * sliderMainFrm.AbsoluteSize.X) + tonumber(minvalue)) or 0
                 pcall(callback, Value)
-                sliderMainFrm.Size = UDim2.new(0, math.clamp(mouse.X - sliderMainFrm.AbsolutePosition.X, 0, 141), 0, 10)
+                sliderMainFrm.Size = UDim2.new(0, math.clamp(mouse.X - sliderMainFrm.AbsolutePosition.X, 0, 170), 0, 10)
                 local moveconnection = mouse.Move:Connect(function()
                     sliderValue.Text = Value.."/"..maxvalue
-                    Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 141) * sliderMainFrm.AbsoluteSize.X) + tonumber(minvalue))
+                    Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 170) * sliderMainFrm.AbsoluteSize.X) + tonumber(minvalue))
                     pcall(callback, Value)
-                    sliderMainFrm.Size = UDim2.new(0, math.clamp(mouse.X - sliderMainFrm.AbsolutePosition.X, 0, 141), 0, 10)
+                    sliderMainFrm.Size = UDim2.new(0, math.clamp(mouse.X - sliderMainFrm.AbsolutePosition.X, 0, 170), 0, 10)
                 end)
                 local releaseconnection
                 releaseconnection = UserInputService.InputEnded:Connect(function(Mouse)
                     if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
-                        Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 141) * sliderMainFrm.AbsoluteSize.X) + tonumber(minvalue))
+                        Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 170) * sliderMainFrm.AbsoluteSize.X) + tonumber(minvalue))
                         pcall(callback, Value)
                         sliderValue.Text = Value.."/"..maxvalue
-                        sliderMainFrm.Size = UDim2.new(0, math.clamp(mouse.X - sliderMainFrm.AbsolutePosition.X, 0, 141), 0, 10)
+                        sliderMainFrm.Size = UDim2.new(0, math.clamp(mouse.X - sliderMainFrm.AbsolutePosition.X, 0, 170), 0, 10)
                         moveconnection:Disconnect()
                         releaseconnection:Disconnect()
                     end
@@ -635,21 +635,21 @@ function Orion:CreateOrion(orionName)
 
             keybindFrame.Name = "keybindFrame"
             keybindFrame.Parent = newPage
-            keybindFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            keybindFrame.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             keybindFrame.Position = UDim2.new(0.0147058824, 0, 0.0246913582, 0)
-            keybindFrame.Size = UDim2.new(0, 394, 0, 42)
-            kbCorner.CornerRadius = UDim.new(0, 3)
+            keybindFrame.Size = UDim2.new(0, 456, 0, 46)
+            kbCorner.CornerRadius = UDim.new(0, 8)
             kbCorner.Parent = keybindFrame
 
             TextButton.Parent = keybindFrame
-            TextButton.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+            TextButton.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
             TextButton.Position = UDim2.new(0.017766498, 0, 0.166666672, 0)
             TextButton.Size = UDim2.new(0, 76, 0, 27)
             TextButton.Font = Enum.Font.GothamSemibold
             TextButton.Text = oldKey
             TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextButton.TextSize = 14
-            tbCorner.CornerRadius = UDim.new(0, 3)
+            tbCorner.CornerRadius = UDim.new(0, 8)
             tbCorner.Parent = TextButton
 
             keybindinfo.Name = "keybindinfo"
@@ -702,10 +702,10 @@ function Orion:CreateOrion(orionName)
 
             textBoxFrame.Name = "textBoxFrame"
             textBoxFrame.Parent = newPage
-            textBoxFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            textBoxFrame.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             textBoxFrame.Position = UDim2.new(0.0147058824, 0, 0.0246913582, 0)
-            textBoxFrame.Size = UDim2.new(0, 394, 0, 42)
-            txbCorner.CornerRadius = UDim.new(0, 3)
+            textBoxFrame.Size = UDim2.new(0, 456, 0, 46)
+            txbCorner.CornerRadius = UDim.new(0, 8)
             txbCorner.Parent = textBoxFrame
 
             textboxInfo.Name = "textboxInfo"
@@ -721,19 +721,19 @@ function Orion:CreateOrion(orionName)
 
             texboxInner.Name = "texboxInner"
             texboxInner.Parent = textBoxFrame
-            texboxInner.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+            texboxInner.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
             texboxInner.Position = UDim2.new(0.017766498, 0, 0.166666672, 0)
-            texboxInner.Size = UDim2.new(0, 141, 0, 27)
-            tiCorner.CornerRadius = UDim.new(0, 3)
+            texboxInner.Size = UDim2.new(0, 170, 0, 30)
+            tiCorner.CornerRadius = UDim.new(0, 8)
             tiCorner.Parent = texboxInner
 
             textboxinneer.Name = "textboxinneer"
             textboxinneer.Parent = texboxInner
-            textboxinneer.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            textboxinneer.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             textboxinneer.ClipsDescendants = true
             textboxinneer.Position = UDim2.new(0.411347508, 0, 0.0370370373, 0)
             textboxinneer.Size = UDim2.new(0, 139, 0, 25)
-            tinCorner.CornerRadius = UDim.new(0, 3)
+            tinCorner.CornerRadius = UDim.new(0, 8)
             tinCorner.Parent = textboxinneer
 
             UIListLayout.Parent = textboxinneer
@@ -788,15 +788,15 @@ function Orion:CreateOrion(orionName)
             dropDownFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
             dropDownFrame.ClipsDescendants = true
             dropDownFrame.Position = UDim2.new(0.011029412, 0, 0.0205760058, 0)
-            dropDownFrame.Size = UDim2.new(0, 394, 0, 42)
-            ddCorner.CornerRadius = UDim.new(0, 3)
+            dropDownFrame.Size = UDim2.new(0, 456, 0, 46)
+            ddCorner.CornerRadius = UDim.new(0, 8)
             ddCorner.Parent = dropDownFrame
 
             dropdownmain.Name = "dropdownmain"
             dropdownmain.Parent = dropDownFrame
-            dropdownmain.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-            dropdownmain.Size = UDim2.new(0, 394, 0, 42)
-            dmCorner.CornerRadius = UDim.new(0, 3)
+            dropdownmain.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
+            dropdownmain.Size = UDim2.new(0, 456, 0, 46)
+            dmCorner.CornerRadius = UDim.new(0, 8)
             dmCorner.Parent = dropdownmain
 
             dropdownItem.Name = "dropdownItem"
@@ -806,7 +806,7 @@ function Orion:CreateOrion(orionName)
             dropdownItem.Size = UDim2.new(0, 291, 0, 41)
             dropdownItem.Font = Enum.Font.GothamSemibold
             dropdownItem.Text = dInfo
-            dropdownItem.TextColor3 = Color3.fromRGB(255, 1, 43)
+            dropdownItem.TextColor3 = Color3.fromRGB(124, 210, 255)
             dropdownItem.TextSize = 14
             dropdownItem.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -815,7 +815,7 @@ function Orion:CreateOrion(orionName)
             ImageButton.Position = UDim2.new(0.89974618, 0, 0.238095239, 0)
             ImageButton.Size = UDim2.new(0, 27, 0, 21)
             ImageButton.Image = "rbxassetid://5165666242"
-            ImageButton.ImageColor3 = Color3.fromRGB(181, 1, 31)
+            ImageButton.ImageColor3 = Color3.fromRGB(0, 170, 255)
 
             UIListLayout.Parent = dropDownFrame
             UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -825,13 +825,13 @@ function Orion:CreateOrion(orionName)
             ImageButton.MouseButton1Click:Connect(function()
                 if isDropped then
                     isDropped = false
-                    dropDownFrame:TweenSize(UDim2.new(0, 394, 0, 42), "In", "Quint", 0.10)
+                    dropDownFrame:TweenSize(UDim2.new(0, 456, 0, 46), "In", "Quint", 0.10)
                     TweenService:Create(ImageButton, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { Rotation = 0 }):Play()
                     task.wait(0.10)
                     UpdateSize()
                 else
                     isDropped = true
-                    dropDownFrame:TweenSize(UDim2.new(0, 394, 0, DropYSize), "In", "Quint", 0.10)
+                    dropDownFrame:TweenSize(UDim2.new(0, 456, 0, DropYSize), "In", "Quint", 0.10)
                     TweenService:Create(ImageButton, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { Rotation = 180 }):Play()
                     task.wait(0.10)
                     UpdateSize()
@@ -844,22 +844,22 @@ function Orion:CreateOrion(orionName)
 
                 optionBtn.Name = "optionBtn"
                 optionBtn.Parent = dropDownFrame
-                optionBtn.BackgroundColor3 = Color3.fromRGB(118, 0, 20)
+                optionBtn.BackgroundColor3 = Color3.fromRGB(36, 44, 66)
                 optionBtn.Position = UDim2.new(0.0253807101, 0, 0.311258286, 0)
-                optionBtn.Size = UDim2.new(0, 377, 0, 39)
+                optionBtn.Size = UDim2.new(0, 439, 0, 40)
                 optionBtn.Font = Enum.Font.GothamSemibold
                 optionBtn.Text = "   "..v
                 optionBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
                 optionBtn.TextSize = 14
                 optionBtn.TextXAlignment = Enum.TextXAlignment.Left
                 DropYSize = DropYSize + 48
-                optionCorner.CornerRadius = UDim.new(0, 3)
+                optionCorner.CornerRadius = UDim.new(0, 8)
                 optionCorner.Parent = optionBtn
 
                 optionBtn.MouseButton1Click:Connect(function()
                     callback(v)
                     dropdownItem.Text = dInfo..": "..v
-                    dropDownFrame:TweenSize(UDim2.new(0, 394, 0, 42), "In", "Quint", 0.10)
+                    dropDownFrame:TweenSize(UDim2.new(0, 456, 0, 46), "In", "Quint", 0.10)
                     task.wait(0.10)
                     UpdateSize()
                     TweenService:Create(ImageButton, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { Rotation = 0 }):Play()
@@ -896,10 +896,10 @@ function Orion:CreateOrion(orionName)
 
             checkFrame.Name = "checkFrame"
             checkFrame.Parent = newPage
-            checkFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            checkFrame.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             checkFrame.Position = UDim2.new(0.0147058824, 0, 0.0246913582, 0)
-            checkFrame.Size = UDim2.new(0, 394, 0, 42)
-            cfCorner.CornerRadius = UDim.new(0, 3)
+            checkFrame.Size = UDim2.new(0, 456, 0, 46)
+            cfCorner.CornerRadius = UDim.new(0, 8)
             cfCorner.Parent = checkFrame
 
             infoLbl.Parent = checkFrame
@@ -915,21 +915,21 @@ function Orion:CreateOrion(orionName)
             -- Borda vermelha
             checkOuter.Name = "checkOuter"
             checkOuter.Parent = checkFrame
-            checkOuter.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+            checkOuter.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
             checkOuter.Position = UDim2.new(0.0177664906, 0, 0.166666672, 0)
             checkOuter.Size = UDim2.new(0, 27, 0, 27)
-            coCorner.CornerRadius = UDim.new(0, 3)
+            coCorner.CornerRadius = UDim.new(0, 8)
             coCorner.Parent = checkOuter
 
             -- Interior escuro
             checkInner.Name = "checkInner"
             checkInner.Parent = checkOuter
             checkInner.AnchorPoint = Vector2.new(0.5, 0.5)
-            checkInner.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            checkInner.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             checkInner.BorderSizePixel = 0
             checkInner.Position = UDim2.new(0.5, 0, 0.5, 0)
             checkInner.Size = UDim2.new(0, 23, 0, 23)
-            ciCorner.CornerRadius = UDim.new(0, 2)
+            ciCorner.CornerRadius = UDim.new(0, 6)
             ciCorner.Parent = checkInner
 
             -- Checkmark (✓)
@@ -950,20 +950,20 @@ function Orion:CreateOrion(orionName)
             checkBtn.Size = UDim2.new(1, 0, 1, 0)
             checkBtn.Text = ""
             checkBtn.AutoButtonColor = false
-            cbCorner.CornerRadius = UDim.new(0, 2)
+            cbCorner.CornerRadius = UDim.new(0, 6)
             cbCorner.Parent = checkBtn
 
             local function applyVisual()
                 if checked then
                     TweenService:Create(checkInner,
                         TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
-                        { BackgroundColor3 = Color3.fromRGB(181, 1, 31) }
+                        { BackgroundColor3 = Color3.fromRGB(0, 170, 255) }
                     ):Play()
                     checkMark.Visible = true
                 else
                     TweenService:Create(checkInner,
                         TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
-                        { BackgroundColor3 = Color3.fromRGB(25, 25, 25) }
+                        { BackgroundColor3 = Color3.fromRGB(19, 22, 30) }
                     ):Play()
                     checkMark.Visible = false
                 end
@@ -1011,10 +1011,10 @@ function Orion:CreateOrion(orionName)
 
             numFrame.Name = "numFrame"
             numFrame.Parent = newPage
-            numFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            numFrame.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             numFrame.Position = UDim2.new(0.0147058824, 0, 0.0246913582, 0)
-            numFrame.Size = UDim2.new(0, 394, 0, 42)
-            nfCorner.CornerRadius = UDim.new(0, 3)
+            numFrame.Size = UDim2.new(0, 456, 0, 46)
+            nfCorner.CornerRadius = UDim.new(0, 8)
             nfCorner.Parent = numFrame
 
             infoLbl.Parent = numFrame
@@ -1029,7 +1029,7 @@ function Orion:CreateOrion(orionName)
 
             -- Botão [-]
             minusBtn.Parent = numFrame
-            minusBtn.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+            minusBtn.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
             minusBtn.BorderSizePixel = 0
             minusBtn.Position = UDim2.new(0, 7, 0, 8)
             minusBtn.Size = UDim2.new(0, 27, 0, 27)
@@ -1038,12 +1038,12 @@ function Orion:CreateOrion(orionName)
             minusBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
             minusBtn.TextSize = 18
             minusBtn.AutoButtonColor = false
-            mbCorner.CornerRadius = UDim.new(0, 3)
+            mbCorner.CornerRadius = UDim.new(0, 8)
             mbCorner.Parent = minusBtn
 
             -- Display / TextBox editável
             valueDisplay.Parent = numFrame
-            valueDisplay.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+            valueDisplay.BackgroundColor3 = Color3.fromRGB(24, 28, 39)
             valueDisplay.BorderSizePixel = 0
             valueDisplay.Position = UDim2.new(0, 38, 0, 8)
             valueDisplay.Size = UDim2.new(0, 65, 0, 27)
@@ -1053,12 +1053,12 @@ function Orion:CreateOrion(orionName)
             valueDisplay.TextSize = 14
             valueDisplay.TextEditable = true
             valueDisplay.ClearTextOnFocus = false
-            vdCorner.CornerRadius = UDim.new(0, 3)
+            vdCorner.CornerRadius = UDim.new(0, 8)
             vdCorner.Parent = valueDisplay
 
             -- Botão [+]
             plusBtn.Parent = numFrame
-            plusBtn.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+            plusBtn.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
             plusBtn.BorderSizePixel = 0
             plusBtn.Position = UDim2.new(0, 107, 0, 8)
             plusBtn.Size = UDim2.new(0, 27, 0, 27)
@@ -1067,7 +1067,7 @@ function Orion:CreateOrion(orionName)
             plusBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
             plusBtn.TextSize = 18
             plusBtn.AutoButtonColor = false
-            pbCorner.CornerRadius = UDim.new(0, 3)
+            pbCorner.CornerRadius = UDim.new(0, 8)
             pbCorner.Parent = plusBtn
 
             local function updateValue(v)
@@ -1126,14 +1126,14 @@ function Orion:CreateOrion(orionName)
             cpFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
             cpFrame.ClipsDescendants = true
             cpFrame.Position = UDim2.new(0.011029412, 0, 0.0205760058, 0)
-            cpFrame.Size = UDim2.new(0, 394, 0, COLLAPSED_H)
-            cpCorner.CornerRadius = UDim.new(0, 3)
+            cpFrame.Size = UDim2.new(0, 456, 0, COLLAPSED_H)
+            cpCorner.CornerRadius = UDim.new(0, 8)
             cpCorner.Parent = cpFrame
 
             cpHeader.Parent = cpFrame
-            cpHeader.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            cpHeader.BackgroundColor3 = Color3.fromRGB(19, 22, 30)
             cpHeader.Size = UDim2.new(1, 0, 0, 42)
-            hdCorner.CornerRadius = UDim.new(0, 3)
+            hdCorner.CornerRadius = UDim.new(0, 8)
             hdCorner.Parent = cpHeader
 
             -- Mini preview da cor atual
@@ -1141,7 +1141,7 @@ function Orion:CreateOrion(orionName)
             cpPreview.BackgroundColor3 = defaultColor
             cpPreview.Position = UDim2.new(0, 7, 0, 8)
             cpPreview.Size = UDim2.new(0, 27, 0, 27)
-            pvCorner.CornerRadius = UDim.new(0, 3)
+            pvCorner.CornerRadius = UDim.new(0, 8)
             pvCorner.Parent = cpPreview
 
             cpTitle.Parent = cpHeader
@@ -1150,7 +1150,7 @@ function Orion:CreateOrion(orionName)
             cpTitle.Size = UDim2.new(0, 260, 0, 42)
             cpTitle.Font = Enum.Font.GothamSemibold
             cpTitle.Text = cpInfo
-            cpTitle.TextColor3 = Color3.fromRGB(255, 1, 43)
+            cpTitle.TextColor3 = Color3.fromRGB(124, 210, 255)
             cpTitle.TextSize = 14
             cpTitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -1159,7 +1159,7 @@ function Orion:CreateOrion(orionName)
             cpArrow.Position = UDim2.new(0.89974618, 0, 0.238095239, 0)
             cpArrow.Size = UDim2.new(0, 27, 0, 21)
             cpArrow.Image = "rbxassetid://5165666242"
-            cpArrow.ImageColor3 = Color3.fromRGB(181, 1, 31)
+            cpArrow.ImageColor3 = Color3.fromRGB(0, 170, 255)
 
             -- Corpo expandido
             cpBody.Parent = cpFrame
@@ -1172,7 +1172,7 @@ function Orion:CreateOrion(orionName)
             colorStrip.BackgroundColor3 = defaultColor
             colorStrip.Position = UDim2.new(0.018, 0, 0, 5)
             colorStrip.Size = UDim2.new(0.964, 0, 0, 15)
-            csCorner.CornerRadius = UDim.new(0, 3)
+            csCorner.CornerRadius = UDim.new(0, 8)
             csCorner.Parent = colorStrip
 
             local function applyColor()
@@ -1203,24 +1203,24 @@ function Orion:CreateOrion(orionName)
                 labelLbl.Size = UDim2.new(0, 20, 1, 0)
                 labelLbl.Font = Enum.Font.GothamBold
                 labelLbl.Text = label
-                labelLbl.TextColor3 = Color3.fromRGB(181, 1, 31)
+                labelLbl.TextColor3 = Color3.fromRGB(0, 170, 255)
                 labelLbl.TextSize = 12
 
                 trackBtn.Parent = rowFrame
-                trackBtn.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+                trackBtn.BackgroundColor3 = Color3.fromRGB(24, 28, 39)
                 trackBtn.BorderSizePixel = 0
                 trackBtn.Position = UDim2.new(0, 30, 0.5, -4)
                 trackBtn.Size = UDim2.new(0, TRACK_W, 0, 8)
                 trackBtn.Text = ""
                 trackBtn.AutoButtonColor = false
-                trCorner.CornerRadius = UDim.new(0, 4)
+                trCorner.CornerRadius = UDim.new(0, 8)
                 trCorner.Parent = trackBtn
 
                 fillFrm.Parent = trackBtn
-                fillFrm.BackgroundColor3 = Color3.fromRGB(181, 1, 31)
+                fillFrm.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
                 fillFrm.BorderSizePixel = 0
                 fillFrm.Size = UDim2.new(0, math.floor((initVal / 255) * TRACK_W), 0, 8)
-                fillCorner.CornerRadius = UDim.new(0, 4)
+                fillCorner.CornerRadius = UDim.new(0, 8)
                 fillCorner.Parent = fillFrm
 
                 valLbl.Parent = rowFrame
@@ -1229,7 +1229,7 @@ function Orion:CreateOrion(orionName)
                 valLbl.Size = UDim2.new(0, 40, 1, 0)
                 valLbl.Font = Enum.Font.GothamSemibold
                 valLbl.Text = tostring(initVal)
-                valLbl.TextColor3 = Color3.fromRGB(199, 0, 33)
+                valLbl.TextColor3 = Color3.fromRGB(120, 220, 255)
                 valLbl.TextSize = 12
 
                 trackBtn.MouseButton1Down:Connect(function()
@@ -1262,10 +1262,10 @@ function Orion:CreateOrion(orionName)
             cpArrow.MouseButton1Click:Connect(function()
                 isOpen = not isOpen
                 if isOpen then
-                    cpFrame:TweenSize(UDim2.new(0, 394, 0, EXPANDED_H), "In", "Quint", 0.10)
+                    cpFrame:TweenSize(UDim2.new(0, 456, 0, EXPANDED_H), "In", "Quint", 0.10)
                     TweenService:Create(cpArrow, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { Rotation = 180 }):Play()
                 else
-                    cpFrame:TweenSize(UDim2.new(0, 394, 0, COLLAPSED_H), "In", "Quint", 0.10)
+                    cpFrame:TweenSize(UDim2.new(0, 456, 0, COLLAPSED_H), "In", "Quint", 0.10)
                     TweenService:Create(cpArrow, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), { Rotation = 0 }):Play()
                 end
                 task.wait(0.10)
